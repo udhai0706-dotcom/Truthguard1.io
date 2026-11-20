@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TruthGuard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <h1>TruthGuard</h1>
+    <p class="intro">Paste an article, or just one claim, and see whether fact-checkers have already reviewed it.</p>
+
+    <section class="card" aria-labelledby="link-label">
+      <label id="link-label" for="link-input">Check a link <span class="hint">(the page never opens it)</span></label>
+      <input id="link-input" type="url" placeholder="Paste a link, for example https://example.com/news/story" autocomplete="off">
+      <button id="check-link" type="button">Check link</button>
+    </section>
+
+    <section class="card" aria-labelledby="key-label">
+      <label id="key-label" for="api-key">Google Fact Check API key <span class="hint">(saved only in this browser on this laptop)</span></label>
+      <input id="api-key" type="password" autocomplete="off" spellcheck="false">
+
+      <label for="claim-text" class="second-label">Article text or claim</label>
+      <textarea id="claim-text" placeholder="Paste the article or the specific claim you want to check..."></textarea>
+      <button id="check-claims" type="button">Check claims</button>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <section id="results" class="results" aria-label="Fact-check results"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

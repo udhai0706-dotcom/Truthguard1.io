@@ -133,7 +133,7 @@ function friendlyError(err) {
 function ratingClass(rating) {
   const r = (rating || "").toLowerCase();
   if (/(partly|half|mixture|mixed|unproven|unverified|missing context|needs context|unclear|outdated|exaggerat|mostly true)/.test(r)) return "mixed";
-  if (/(false|fake|incorrect|wrong|hoax|scam|fabricat|pants|not true|misleading|baseless|no evidence)/.test(r)) return "bad";
+  if (/(false|fake|incorrect|wrong|hoax|scam|fabricat|pants|not true|misleading|baseless|inaccura|distort|no evidence)/.test(r)) return "bad";
   if (/(true|correct|accurate|real|legit)/.test(r)) return "good";
   return "";
 }
